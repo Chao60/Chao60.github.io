@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    id="meta-description"
+    name="description"
+    content="Chaoxiang Yang 的个人工程作品集，聚焦 FPGA、Python 与音频工具开发。"
+  />
+  <meta name="theme-color" content="#050505" />
+  <title id="page-title">Chaoxiang Yang | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div
+    id="splash-screen"
+    class="splash-screen"
+    aria-label="Opening animation"
+    data-i18n-attr="aria-label:splashAriaLabel"
+  >
+    <button id="skip-splash" class="skip-splash" type="button" data-i18n="skipSplash">跳过动画</button>
+    <div class="splash-stage">
+      <p class="splash-label">FPGA / PYTHON / AUDIO TOOLS</p>
+      <div class="orbit-frame" aria-hidden="true">
+        <div class="orbit-tilt">
+          <div class="orbit-arc"></div>
+          <div id="orbit-cubes" class="orbit-cubes"></div>
+        </div>
+      </div>
+      <h1 class="splash-name">Chaoxiang Yang</h1>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main" data-i18n="skipToMain">跳转到主要内容</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Back to top" data-i18n-attr="aria-label:backToTopAriaLabel">
+      <span class="brand-mark">CY</span>
+      <span class="brand-text" data-i18n="brandText">Engineering Portfolio</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation" data-i18n-attr="aria-label:primaryNavAriaLabel">
+      <a href="#projects" data-i18n="navProjects">项目</a>
+      <a href="#features" data-i18n="navFeatures">功能</a>
+      <a href="#certificates" data-i18n="navCertificates">证书</a>
+      <a href="#contact" data-i18n="navContact">联系</a>
+    </nav>
+
+    <div class="header-actions">
+      <button
+        id="language-toggle"
+        class="icon-button"
+        type="button"
+        aria-label="Switch language"
+        data-i18n-attr="aria-label:languageToggleAriaLabel"
+      >
+        EN
+      </button>
+      <button
+        id="theme-toggle"
+        class="icon-button"
+        type="button"
+        aria-label="Toggle theme"
+        data-i18n="themeToggle"
+        data-i18n-attr="aria-label:themeToggleAriaLabel"
+      >
+        Theme
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">FPGA / Python / Audio Engineering</p>
+        <h1>Chaoxiang Yang</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          这个站点将作为我的个人工程主页。当前先集中展示两个核心项目：
+          一个是基于 FPGA 的 BMS 播放器基础版本，另一个是基于 Python 的音频编辑软件开发版本，
+          后续会继续加入功能迭代、证书与更多工程实践。
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects" data-i18n="heroPrimaryButton">查看项目</a>
+          <a class="button ghost" href="#features" data-i18n="heroSecondaryButton">查看规划功能</a>
+        </div>
+
+        <div class="quick-stats" aria-label="Project highlights" data-i18n-attr="aria-label:projectHighlightsAriaLabel">
+          <div class="stat-card">
+            <span class="stat-number" data-count="2">0</span>
+            <span class="stat-label" data-i18n="statCurrentProjects">Current Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="4">0</span>
+            <span class="stat-label" data-i18n="statPlannedFeatures">Planned Features</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="3">0</span>
+            <span class="stat-label" data-i18n="statCertificateSlots">Certificate Slots</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="focus-panel reveal" aria-label="Current focus" data-i18n-attr="aria-label:currentFocusAriaLabel">
+        <div class="panel-header">
+          <span></span><span></span><span></span>
+          <strong>current_focus.txt</strong>
+        </div>
+        <div class="panel-body">
+          <p><span class="prompt">01</span> <span data-i18n="focusItemOneTitle">FPGA 基础 BMS 播放器</span></p>
+          <p class="panel-detail" data-i18n="focusItemOneDetail">基础版本，突出音频播放逻辑、硬件时序控制与模块化设计。</p>
+          <p><span class="prompt">02</span> <span data-i18n="focusItemTwoTitle">Python 音频编辑软件</span></p>
+          <p class="panel-detail" data-i18n="focusItemTwoDetail">develop 中，面向音频切片、可视化编辑和基础处理流程。</p>
+          <p><span class="prompt">Next</span> <span data-i18n="focusNext">功能扩展 / 文档补全 / 证书展示</span></p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="projectsEyebrow">Selected Projects</p>
+        <h2 data-i18n="projectsTitle">项目展示</h2>
+        <p data-i18n="projectsIntro">
+          首页内容先收缩到两个最核心的工程项目，让访问者一眼看到你当前真正投入的方向。
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <span class="tag" data-i18n="projectOneTag">FPGA</span>
+          <h3 data-i18n="projectOneTitle">FPGA 基础版 BMS 播放器</h3>
+          <p data-i18n="projectOneDesc">
+            以硬件逻辑为核心的基础版播放器项目，重点展示 BMS 播放流程、节奏控制、
+            音频输出链路和适合继续扩展的模块组织方式。
+          </p>
+          <div class="project-meta">
+            <span data-i18n="projectOneMetaA">基础版本</span>
+            <span data-i18n="projectOneMetaB">硬件时序</span>
+            <span data-i18n="projectOneMetaC">模块化设计</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <span class="tag" data-i18n="projectTwoTag">Python</span>
+          <h3 data-i18n="projectTwoTitle">Python 音频编辑软件</h3>
+          <p data-i18n="projectTwoDesc">
+            正在 develop 中的桌面音频工具，目标是提供更直观的音频剪辑与编辑体验，
+            后续会逐步补充波形显示、处理流程和导出能力。
+          </p>
+          <div class="project-meta">
+            <span data-i18n="projectTwoMetaA">develop</span>
+            <span data-i18n="projectTwoMetaB">音频编辑</span>
+            <span data-i18n="projectTwoMetaC">工具软件</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="featuresEyebrow">Roadmap</p>
+        <h2 data-i18n="featuresTitle">后续功能</h2>
+        <p data-i18n="featuresIntro">
+          这里保留为可持续扩展的区域，适合陆续补充你想做的功能、优化方向和正在推进的工程点。
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <h3 data-i18n="featureOneTitle">波形可视化编辑</h3>
+          <p data-i18n="featureOneDesc">为 Python 音频软件加入更清晰的波形浏览、缩放与区间选取能力。</p>
+        </article>
+        <article class="feature-card reveal">
+          <h3 data-i18n="featureTwoTitle">批量处理流程</h3>
+          <p data-i18n="featureTwoDesc">支持批量导入、批量裁剪或统一导出，降低重复操作成本。</p>
+        </article>
+        <article class="feature-card reveal">
+          <h3 data-i18n="featureThreeTitle">硬件演示页面</h3>
+          <p data-i18n="featureThreeDesc">为 FPGA 项目补上架构图、时序说明和演示视频入口。</p>
+        </article>
+        <article class="feature-card reveal">
+          <h3 data-i18n="featureFourTitle">工程文档整理</h3>
+          <p data-i18n="featureFourDesc">沉淀设计说明、开发日志与使用说明，让作品更完整可读。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="certificates" class="section split-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="certificatesEyebrow">Certificates</p>
+        <h2 data-i18n="certificatesTitle">证书与经历</h2>
+        <p data-i18n="certificatesIntro">
+          这里先做成展示位。之后你只需要把证书名称、时间、机构和对应图片或链接补进去即可。
+        </p>
+      </div>
+
+      <div class="certificate-list">
+        <article class="certificate-card reveal">
+          <span class="certificate-year" data-i18n="certificateOneSlot">Slot 01</span>
+          <h3 data-i18n="certificateOneTitle">FPGA / 嵌入式相关证书</h3>
+          <p data-i18n="certificateOneDesc">预留给硬件方向证书、竞赛或项目认证。</p>
+        </article>
+        <article class="certificate-card reveal">
+          <span class="certificate-year" data-i18n="certificateTwoSlot">Slot 02</span>
+          <h3 data-i18n="certificateTwoTitle">Python / 软件开发相关证书</h3>
+          <p data-i18n="certificateTwoDesc">预留给编程、工具开发或技术课程认证。</p>
+        </article>
+        <article class="certificate-card reveal">
+          <span class="certificate-year" data-i18n="certificateThreeSlot">Slot 03</span>
+          <h3 data-i18n="certificateThreeTitle">音频 / 创作工具相关成果</h3>
+          <p data-i18n="certificateThreeDesc">也可以放作品证明、开发经历或阶段性里程碑。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-card reveal">
+        <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+        <h2 data-i18n="contactTitle">欢迎交流项目与合作</h2>
+        <p data-i18n="contactDesc">
+          如果你对 FPGA、音频工具或工程实现细节感兴趣，欢迎通过邮件或 GitHub 联系我。
+        </p>
+
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:Chaoxiang.22@intl.zju.edu.cn" data-i18n="contactPrimaryButton">发送邮件</a>
+          <button id="copy-email" class="button ghost" type="button" data-i18n="copyEmail">复制邮箱</button>
+          <a class="button ghost" href="https://github.com/andyyang4317" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Chaoxiang Yang</span>
+    <span data-i18n="footerBuiltWith">Built with plain HTML / CSS / JS</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
